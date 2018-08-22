@@ -34,6 +34,11 @@ class Backend:
         wd = self.app.wd
         wd.find_element_by_class_name("name[en]").clear()
         wd.find_element_by_class_name("name[en]").send_keys(Config.product_name01)
+        wd.find_element_by_xpath('//*[@id="tab-general"]/div/div[1]/div[1]/div/div/label[1]').click()
+        wd.find_element_by_link_text("Price").click()
+        wd.find_element_by_class_name("prices[USD]").clear()
+        wd.find_element_by_class_name("prices[USD]").send_keys(Config.product_price)
+        wd.find_element_by_class_name("save").click()
 
 
 __author__ = 'GiSDeCain'
