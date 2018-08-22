@@ -40,5 +40,10 @@ class Backend:
         wd.find_element_by_class_name("prices[USD]").send_keys(Config.product_price)
         wd.find_element_by_class_name("save").click()
 
+    def newly_created_product(self):
+        wd = self.app.wd
+        element = wd.find_element_link_text(Config.product_name01)
+        return element
+
 
 __author__ = 'GiSDeCain'
