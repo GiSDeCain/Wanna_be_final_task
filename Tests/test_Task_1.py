@@ -10,6 +10,7 @@ def test_add_product(app):
     app.frontend.open_main_page()
     app.frontend.go_to_category()
     assert app.frontend.find_added_product() == app.Config.product_name01
-    assert
+    assert app.frontend.find_label_new() == "New"
+
 
 __author__ = 'GiSDeCain'
