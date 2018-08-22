@@ -1,6 +1,6 @@
 from selenium.webdriver.chrome.webdriver import WebDriver
-from be import Backend
-from fe import Frontend
+from Pages.be import Backend
+from Pages.fe import Frontend
 
 
 class Application:
