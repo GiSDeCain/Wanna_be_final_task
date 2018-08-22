@@ -5,7 +5,7 @@ from config import Config
 class Common:
 
     def __init__(self):
-        self.wd = WebDriver
+        self.wd = WebDriver()
 
     def open_login_page_be(self):
         wd = self.wd
@@ -19,7 +19,7 @@ class Common:
 class Backend:
 
     def __init__(self):
-        self.wd = WebDriver
+        self.wd = WebDriver()
 
     def login_be(self):
         wd = self.wd
