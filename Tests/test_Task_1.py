@@ -9,6 +9,7 @@ def test_add_product(app):
     assert app.backend.newly_created_product() == app.Config.product_name01
     app.frontend.open_main_page()
     app.frontend.go_to_category()
-
+    assert app.frontend.find_added_product() == app.Config.product_name01
+    assert
 
 __author__ = 'GiSDeCain'
