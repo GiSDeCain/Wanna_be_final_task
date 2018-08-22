@@ -1,15 +1,6 @@
-import pytest
 from selenium.webdriver.chrome.webdriver import WebDriver
-
 from be import Backend
 from fe import Frontend
-
-
-@pytest.fixture
-def app(request):
-    fixture = Application
-    request.addfinalizer(fixture.destroy)
-    return fixture
 
 
 class Application:
