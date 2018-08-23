@@ -12,15 +12,15 @@ class Backend:
 
     def login(self):
         wd = self.app.wd
-        wd.find_element_by_class_name("username").clear()
-        wd.find_element_by_class_name("username").send_keys(Config.admin)
-        wd.find_element_by_class_name("password").clear()
-        wd.find_element_by_class_name("password").send_keys(Config.apasswd)
-        wd.find_element_by_class_name("login").click()
+        wd.find_element_by_name("username").clear()
+        wd.find_element_by_name("username").send_keys(Config.admin)
+        wd.find_element_by_name("password").clear()
+        wd.find_element_by_name("password").send_keys(Config.apasswd)
+        wd.find_element_by_xpath('//*[@id="box-login"]/form/div[2]/button').click()
 
     def open_catalog(self):
         wd = self.app.wd
-        wd.find_element_by_class_name("Catalog").click()
+        wd.find_element_by_name("Catalog").click()
 
     def select_category(self):
         wd = self.app.wd
