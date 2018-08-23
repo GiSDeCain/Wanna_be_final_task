@@ -24,5 +24,9 @@ class Frontend:
         element = wd.find_element_by_class_name("sticker new").text()
         return element
 
+    def add_product_to_cart(self):
+        wd = self.app.wd
+        wd.find_element_by_name("add_cart_product").click()
+
 
 __author__ = 'GiSDeCain'
