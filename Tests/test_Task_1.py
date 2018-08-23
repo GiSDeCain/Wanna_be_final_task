@@ -12,6 +12,8 @@ def test_add_product(app):
     assert app.frontend.find_added_product() == app.Config.product_name01
     assert app.frontend.find_label_new() == "New"
     app.frontend.add_product_to_cart()
+    app.frontend.open_cart()
+
 
 
 __author__ = 'GiSDeCain'

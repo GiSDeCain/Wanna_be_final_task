@@ -29,5 +29,9 @@ class Frontend:
         wd.find_element_by_name("add_cart_product").click()
         wd.close()
 
+    def open_cart(self):
+        wd = self.app.wd
+        wd.get(Config.cart)
+
 
 __author__ = 'GiSDeCain'
