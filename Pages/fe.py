@@ -20,26 +20,29 @@ class Frontend:
 
     def find_added_product(self):
         wd = self.app.wd
-        element = wd.find_element_by_name(Config.product_name01).text
+        element = wd.find_element_by_xpath('//*[@id="box-category"]/div[2]/div[2]/div/a/div[2]').text
         return element
 
     def find_label_new(self):
         wd = self.app.wd
-        element = wd.find_element_by_class_name("sticker new").text
+        element = wd.find_element_by_xpath('//*[@id="box-category"]/div[2]/div[2]/div/a/div[1]/div').text
         return element
 
     def add_product_to_cart(self):
         wd = self.app.wd
         wd.find_element_by_name("add_cart_product").click()
-        wd.close()
+
+    def close_product_window(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath('/html/body/div[2]/div/div[1]').click()
 
     def open_cart(self):
         wd = self.app.wd
-        wd.find_element_by_id("cart").click()
+        wd.find_element_by_xpath('//*[@id="cart"]/a/div/div').click()
 
     def find_product_name_in_cart(self):
         wd = self.app.wd
-        element = wd.find_element_by_class_name("item").text
+        element = wd.find_element_by_xpath('//*[@id="box-checkout-cart"]/div/table/tbody/tr/td[2]/div/strong/a').text
         return element
 
 

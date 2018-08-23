@@ -12,7 +12,7 @@ class Application:
         self.frontend = Frontend(self)
 
     def destroy(self):
-        #self.wd.close()
+        self.wd.close()
         self.wd.quit()
 
 
