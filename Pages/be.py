@@ -42,7 +42,7 @@ class Backend:
 
     def newly_created_product(self):
         wd = self.app.wd
-        element = wd.find_element_by_link_text(Config.product_name01).text
+        element = wd.find_element_by_link_text("name of product01").text
         return element
 
 

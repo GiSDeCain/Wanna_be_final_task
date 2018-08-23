@@ -2,13 +2,13 @@ from config import Config
 
 
 def test_add_product(app):
-    # app.backend.open_login_page()
-    # app.backend.login()
-    # app.backend.open_catalog()
-    # app.backend.select_category()
-    # app.backend.add_new_product()
-    # app.backend.fill_new_product()
-    # assert Config.product_name01  == app.backend.newly_created_product()
+    app.backend.open_login_page()
+    app.backend.login()
+    app.backend.open_catalog()
+    app.backend.select_category()
+    app.backend.add_new_product()
+    app.backend.fill_new_product()
+    assert Config.product_name01  == app.backend.newly_created_product()
     app.frontend.open_main_page()
     app.frontend.go_to_category()
     assert Config.product_name01 == app.frontend.find_added_product()
