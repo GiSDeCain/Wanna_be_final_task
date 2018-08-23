@@ -20,11 +20,11 @@ class Backend:
 
     def open_catalog(self):
         wd = self.app.wd
-        wd.find_element_by_name("Catalog").click()
+        wd.find_element_by_xpath('//*[@id="app-"][2]').click()
 
     def select_category(self):
         wd = self.app.wd
-        wd.find_element_by_link_text("Konrad")
+        wd.find_element_by_link_text("Konrad").click()
 
     def add_new_product(self):
         wd = self.app.wd

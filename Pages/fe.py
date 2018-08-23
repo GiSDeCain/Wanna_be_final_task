@@ -31,7 +31,7 @@ class Frontend:
 
     def open_cart(self):
         wd = self.app.wd
-        wd.get(Config.cart)
+        wd.find_element_by_xpath('//*[@id="cart"]/a/div/div').click()
 
     def find_product_name_in_cart(self):
         wd = self.app.wd
