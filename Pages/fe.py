@@ -14,9 +14,13 @@ class Frontend:
         wd = self.app.wd
         wd.find_element_by_xpath('//*[@id="box-category-tree"]/ul/li[1]/a').click()
 
+    def open_added_product(self):
+        wd = self.app.wd
+        wd.find_element_by_name(Config.product_name01).click()
+
     def find_added_product(self):
         wd = self.app.wd
-        element = wd.find_element_by_class_name(Config.product_name01).text()
+        element = wd.find_element_by_name(Config.product_name01).text()
         return element
 
     def find_label_new(self):
