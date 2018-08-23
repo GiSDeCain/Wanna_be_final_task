@@ -33,5 +33,10 @@ class Frontend:
         wd = self.app.wd
         wd.get(Config.cart)
 
+    def find_product_name_in_cart(self):
+        wd = self.app.wd
+        element = wd.find_element_by_class_name("item").text()
+        return element
+
 
 __author__ = 'GiSDeCain'
